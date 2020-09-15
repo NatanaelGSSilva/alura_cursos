@@ -9,16 +9,21 @@ def carregar_acessos():
 
     leitor = csv.reader(arquivo)
 
-    # leitor.next()
+    next(leitor)
 
-    for acessou_home, acessou_como_funciona, acessou_contato, comprou in leitor:
+    for home, como_funciona, \
+            contato, comprou in leitor:
 
-        x.append([acessou_home, acessou_como_funciona, acessou_contato])
+        dado = ([int(home), int(
+            como_funciona), int(contato)])
 
-        y.append(comprou)
+        x.append(dado)
+        y.append(int(comprou))
 
     return x, y
 
+
+print(carregar_acessos())
 
 # from dados import carregar_acessos importar a funcao carregar acessos de dados.py
 # x, y = carregar_acessos() vou rodar a minha função
