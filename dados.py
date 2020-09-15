@@ -23,7 +23,7 @@ def carregar_acessos():
     return x, y
 
 
-print(carregar_acessos())
+#print(carregar_acessos())
 
 # from dados import carregar_acessos importar a funcao carregar acessos de dados.py
 # x, y = carregar_acessos() vou rodar a minha função
