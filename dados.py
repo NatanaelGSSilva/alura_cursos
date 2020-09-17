@@ -23,7 +23,22 @@ def carregar_acessos():
     return x, y
 
 
-#print(carregar_acessos())
+def carregar_buscas():
+    x = []
+    y = []
+
+    arquivo = open("busca.csv", "r")
+    leitor = csv.reader(arquivo)
+    next(leitor)  # ignorar a primeira linha
+
+    for home, busca, logado, comprou in leitor:
+        dado = [int(home), busca, int(logado)]
+
+        x.append(dado)
+        y.append(int(comprou))
+    return x, y
+
+# print(carregar_acessos())
 
 # from dados import carregar_acessos importar a funcao carregar acessos de dados.py
 # x, y = carregar_acessos() vou rodar a minha função
